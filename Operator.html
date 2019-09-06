@@ -1,55 +1,61 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <meta char="utf-8">
-        <title>연산자</title>
-    </head>
-    <body>
-        <script>
-            //boolean타입의 데이터
-            var tr = true;
-            var bl = false;
-            alert(tr);
-            alert(bl);
 
-            //대입 연산자
-            var a = "1" , b = "2";
-            alert(a + b);
+<head>
+    <meta char="utf-8">
+    <title>연산자</title>
+</head>
 
-            //동등 연산자(==), 서로 값이 같다면 true, 다르면 false
-            alert("1 == 10 : " + (1 == 10)); //false
-            alert("1 == 1 : " + (1 == 1)); //true
-            alert("str == str : " + ("str" == "str")); //true
-            alert("str == Str : " + ("str" == "Str")); //false
-            alert("1 == \"1\" : " + (1 == "1")); //true
-            alert("null == undefined : " + (null == undefined)); //true
-            alert("true == 1 : " + (true == 1)); //true
-            alert("true == 2 : " + (true == 2)); //false
-            alert("false == 0 : " + (false == 0)); //false
-            alert("false == 2 : " + (false == 2)); //false
+<body>
+    <script>
+        //boolean타입의 데이터
+        var tr = true;
+        var bl = false;
+        alert(tr);
+        alert(bl);
 
-            //일치 연산자(===), 좌항과 우항의 데이터 형태 까지 비교한다. 강력하게 권장
-            alert("str === Str : " + ("str" === "Str")); //false
-            alert("1 === 1 : " + (1 === 1)); //true
-            alert("1 === 2 : " + (1 === 2)); //false
-            alert("1 === \"1\" : " + (1 === "1")); //false
-            alert("null === undefined : " + (null === undefined)); //false
-            alert("true === 1 : " + (true === 1)); //false
-            alert("false === 0 : " + (false === 0)); //false
-            
-            //비동등연산자(!=)
-            alert("1 != 2 : " + (1 != 2)); //true
-            alert("1 != 1 : " + (1 != 1)); //false
+        //대입 연산자
+        var a = "1", b = "2";
+        alert(a + b);
 
-            //비일치연산자(!==)
-            alert("1 !== 1 : " + (1 !== 1)) //false
-            alert("1 !== \"1\" : " + (1 !== "1")); //true
+        //동등 연산자(==), 서로 값이 같다면 true, 다르면 false
+        var c = null;
+        alert("1 == 10 : " + (1 == 10)); //false
+        alert("1 == 1 : " + (1 == 1)); //true
+        alert("str == str : " + ("str" == "str")); //true
+        alert("str == Str : " + ("str" == "Str")); //false
+        alert("1 == \"1\" : " + (1 == "1")); //true
+        alert("null == undefined : " + (null == undefined)); //true
+        alert("true == 1 : " + (true == 1)); //true
+        alert("true == 2 : " + (true == 2)); //false
+        alert("false == 0 : " + (false == 0)); //false
+        alert("false == 2 : " + (false == 2)); //false
+        alert("c == undefined : " + (c == undefined)); //true
 
-            //부등호 연산자(<, >, <=, >=)
-            alert("1 > 10 : " + (1 > 10)); //false
-            alert("1 < 10 : " + (1 < 10)); //true
-            alert("1 >= 10 : " + (1 >= 10)); //false
-            alert("1 <= 10 : " + (1 <= 10)); //true
-        </script>
-    </body>
+        //일치 연산자(===), 좌항과 우항의 데이터 형태 까지 비교한다. 강력하게 권장
+        alert("str === Str : " + ("str" === "Str")); //false
+        alert("1 === 1 : " + (1 === 1)); //true
+        alert("1 === 2 : " + (1 === 2)); //false
+        alert("1 === \"1\" : " + (1 === "1")); //false
+        alert("null === undefined : " + (null === undefined)); //false
+        alert("true === 1 : " + (true === 1)); //false
+        alert("false === 0 : " + (false === 0)); //false
+        alert("c === undefined : " + (c === undefined)); //false
+
+        //비동등연산자(!=)
+        alert("1 != 2 : " + (1 != 2)); //true
+        alert("1 != 1 : " + (1 != 1)); //false
+
+        //비일치연산자(!==)
+        alert("1 !== 1 : " + (1 !== 1)) //false
+        alert("1 !== \"1\" : " + (1 !== "1")); //true
+
+        //부등호 연산자(<, >, <=, >=)
+        alert("1 > 10 : " + (1 > 10)); //false
+        alert("1 < 10 : " + (1 < 10)); //true
+        alert("1 >= 10 : " + (1 >= 10)); //false
+        alert("1 <= 10 : " + (1 <= 10)); //true
+    </script>
+</body>
+
 </html>
