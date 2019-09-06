@@ -1,69 +1,72 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <meta char="utf-8">
-        <title>함수</title>
-    </head>
-    <body>
-        <script>
-            //함수의 개요
-            function show() {
-               for(var i = 1; i <= 10; i++) {
-                   document.write(i + " ");
-               }
-               document.write("<br/>");
+
+<head>
+    <meta char="utf-8">
+    <title>함수</title>
+</head>
+
+<body>
+    <script>
+        //함수의 개요
+        function show() {
+            for (var i = 1; i <= 10; i++) {
+                document.write(i + " ");
             }
+            document.write("<br/>");
+        }
 
-            show();
+        show();
 
-            //함수 예제1
-            function getter() {
-                return "marin"; //return은 함수가 끝나는 위치
+        //함수 예제1
+        function getter() {
+            return "marin"; //return은 함수가 끝나는 위치
+        }
+        document.write(getter() + "<br/>");
+
+        //함수 예제2
+        function setter(a) {
+            return a;
+        }
+        document.write(setter(1) + "<br/>");
+        document.write(setter(2) + "<br/>");
+
+        //함수 예제3
+        function plus(a, b) {
+            if (a > b) {
+                return (a + b) / 2 * (a - b + 1);
             }
-            document.write(getter() + "<br/>");
-
-            //함수 예제2
-            function setter(a) {
-                return a;
+            else {
+                return (a + b) / 2 * (b - a + 1);
             }
-            document.write(setter(1) + "<br/>");
-            document.write(setter(2) + "<br/>");
+        }
+        document.write(plus(10, 1) + "<br/>");
+        document.write(plus(3, 16) + "<br/>");
 
-            //함수 예제3
-            function plus(a, b) {
-                if(a > b){
-                    return (a + b) / 2 * (a - b + 1);
-                }
-                else{
-                    return (a + b) / 2 * (b - a + 1);
-                }
+
+        //함수 예제4
+        another_function = function (a, b) {
+            return a * b / 2;
+        }
+
+        var x = another_function(10, 12);
+        document.write(x);
+
+        //함수 예제5(익명함수)
+        (function (a, b, c) {
+            var max;
+            if (a > b) {
+                max = a;
             }
-            document.write(plus(10, 1) + "<br/>");
-            document.write(plus(3, 16) + "<br/>");
-
-
-            //함수 예제4
-            another_function = function (a, b) {
-                return a * b / 2;
+            else {
+                max = b;
             }
+            if (max < c) {
+                max = c;
+            }
+            return max;
+        })();
+    </script>
+</body>
 
-            var x = another_function(10, 12);
-            document.write(x);
-
-            //함수 예제5
-            (function (a, b, c) {
-                var max;
-                if(a > b) {
-                    max = a;
-                }
-                else{
-                    max = b;
-                }
-                if(max < c){
-                    max = c;
-                }
-                return max;
-            })();
-        </script>
-    </body>
 </html>
