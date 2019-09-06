@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta char="utf-8">
+        <title>반복문</title>
+    </head>
+    <body>
+        <script>
+            //반복문1(while)
+            var cnt = 0;
+            while(cnt < 10) { //cnt가 10미만이면 참이다.
+                document.write("Coding is fun <br/>");
+                document.write(cnt + "<br/>");
+                cnt = cnt + 1;
+            }
+
+            //반복문2(for)
+            for(var i = 0;  i < 10; i++) {
+                document.write("Coding is very fun <br/>");
+                document.write(i + "<br/>");
+            }
+
+            //반복문의 편리함 1
+            var k = prompt("원하는 구구단 숫자를 입력하세요");
+            document.write("prompt로 바로 입력 받았을 때 데이터 타입 : " + typeof(k) + "<br/>");
+            k = Number(k);
+            document.write("Number로 변환 후 데이터 타입 : " + typeof(k) + "<br/>");
+            for(var i = 1; i <= 100; i++) {
+                document.write(k + " * " + i + " = " + (k * i) + "<br/>");
+            }
+
+            //반복문의 편리함 2
+            var m = 1, n = 1;
+            for(var i = 1; i <= 100; i++) {
+                if(i === 1 || i === 2) {
+                    document.write(i + "번째 피보나치 항 : " + 1 + "<br/>");
+                }
+                else{
+                    var temp = n;
+                    n = m + n;
+                    m = temp;
+                    var out = n;
+                    document.write(i + "번째 피보나치 항 : " + n + "<br/>");
+                }
+            }
+
+            //반복문을 중지시키기
+            while(true) {
+                var t = prompt("숫자를 입력하세요(10을 입력하면 종료)");
+                t = Number(t);
+                if(t === 10) {
+                    break;
+                }
+                document.write(t + "<br/>");
+            }
+
+            //반복문을 특정 조건에서 건너뛰기
+            var x = 4;
+            for(var i = 1; i <= 100; i++) {
+                if(i % 3 === 0) { //3의 배수이면 
+                    continue; //거른다.
+                }
+                document.write(x + " * " + i + " = " + (x * i) + "<br/>");
+            }
+
+            //반복문의 중첩
+            for(var i = 1; i <= 9; i++) {
+                for(var j = 1; j <= 9; j++) {
+                    document.write(i + " * " + j + " = " + (i * j) + "<br/>");
+                    document.write("문자열로 인식" + i + j + "</br>");
+                }
+            }
+
+        </script>
+    </body>
+</html>
